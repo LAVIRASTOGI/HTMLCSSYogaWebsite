@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+:root {
+  --mainColor: #7b6cd5;
+  --secondaryColor: #fe86d4;
+  --mainHeadingFont: 2rem;
+  --mainHeadingColor: #7b6cd5;
+  --paraFont: 1.2rem;
+  --secondaryHeadingFont: 1.5rem;
+  --backgroundColor: #f5f5f5;
+}
+
+h1 {
+  font-size: var(--mainHeadingFont);
+  color: var(--mainHeadingColor);
+  margin-bottom: 0.5rem;
+  line-height: normal;
+}
+h2 {
+  font-size: var(--secondaryHeadingFont);
+}
+svg {
+  width: 4rem;
+}
+svg {
+  margin-left: -1px;
+}
+p {
+  font-size: var(--paraFont);
+}
+
+.container {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.heading {
+  text-align: center;
+}
+
+/* end of common  */
+/* header */
+.heroContainer {
+  background-image: url(./images/yoga-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+}
+.heroContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Black overlay with 50% opacity */
+  z-index: 1;
+}
+
+.heroContainer .contentContainer {
+  position: absolute;
+  top: 6%;
+  z-index: 2;
+  color: white;
+}
+.heroContainer .navContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.heroContainer .navContainer .underlineContent {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(170, 170, 170);
+}
+
+.heroContainer .navContainer nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.heroContainer .navContainer nav ul li a {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+.heroContainer .navContainer nav ul li a i {
+  height: 1rem;
+  width: 1rem !important;
+}
+.heroContainer .navContainer li {
+  margin-right: 2rem;
+}
+.heroContainer .navContainer li:last-child {
+  margin-right: 0rem;
+}
+.heroContainer .navContainer .logoContainer {
+  margin-top: -1.2rem;
+}
+.heroContainer .mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.1rem;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+.heroContainer .mainContent h1 {
+  font-size: 3rem;
+  color: white;
+}
+.heroContainer .mainContent p {
+  font-size: 1.5rem;
+}
+.heroContainer .mainContent button {
+  font-size: 1.5rem;
+  background: var(--secondaryColor);
+  color: #ffff;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.heroContainer .mainContent {
+  padding: 1rem;
+}
+/* end */
+
+/* section features */
+
+.features {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* section yoga class */
+.yogaClassContainer {
+  background-color: var(--backgroundColor);
+}
+.yogaClassContainer .contentContainer {
+  display: flex;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+}
+
+.yogaClassContainer .imageContent {
+  background-image: url(./images/the-best-class-yoga.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  width: 50%;
+  height: auto;
+}
+
+.yogaClassContainer .classContent {
+  width: 50%;
+  padding: 3rem;
+}
+.yogaClassContainer .classContent h2 {
+  color: var(--mainHeadingColor);
+  font-size: var(--mainHeadingFont);
+  margin-bottom: 1rem;
+}
+.yogaClassContainer .classContent p {
+  margin-bottom: 2rem;
+}
+
+.yogaClassContainer .classContent ul {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.yogaClassContainer .classContent li {
+  display: flex;
+  align-items: center;
+}
+.yogaClassContainer .classContent li .iconContent {
+  margin-left: -1rem;
+}
+/* section - yogaAdvantagesContainer - start */
+.yogaAdvantagesContainer {
+  background-image: url(./images/advantages-of-yoga.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 60px 15px 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.yogaAdvantagesContainer .advantagesContainer {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+.yogaAdvantagesContainer .advantageRightContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: right;
+}
+.yogaAdvantagesContainer .advantageLeftContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+  margin-left: 2rem;
+}
+.yogaAdvantagesContainer .advantage h2 {
+  transition: all 1s;
+}
+.yogaAdvantagesContainer .advantage h2:hover {
+  color: var(--secondaryColor);
+  cursor: pointer;
+}
+.yogaAdvantagesContainer .advantage {
+  width: 50%;
+}
+
+.yogaAdvantagesContainer .advantage1 {
+  align-self: flex-end;
+}
+.yogaAdvantagesContainer .advantage2 {
+  align-self: center;
+}
+.yogaAdvantagesContainer .advantage3 {
+  align-self: flex-start;
+}
+.yogaAdvantagesContainer .advantage4 {
+  align-self: flex-start;
+}
+.yogaAdvantagesContainer .advantage5 {
+  align-self: center;
+}
+.yogaAdvantagesContainer .advantage6 {
+  align-self: flex-end;
+}
+@media screen and (max-width: 700px) {
+  /* header */
+  .heroContainer .infoContainer {
+    display: none;
+  }
+  .heroContainer .navContainer nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  :root {
+    font-size: 12px;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  /* class */
+
+  .yogaClassContainer .contentContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .yogaClassContainer .imageContent {
+    width: 100%;
+    height: 400px;
+  }
+
+  .yogaClassContainer .classContent {
+    width: 100%;
+    padding: 3rem;
+  }
+  /* yoga centre */
+
+  .yogaAdvantagesContainer {
+    position: relative;
+  }
+  .yogaAdvantagesContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Black overlay with 50% opacity */
+    z-index: 1;
+  }
+
+  .yogaAdvantagesContainer .advantagesContainer {
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  .yogaAdvantagesContainer .advantage h2 {
+    color: var(--secondaryColor);
+  }
+  .yogaAdvantagesContainer .advantage1,
+  .yogaAdvantagesContainer .advantage2,
+  .yogaAdvantagesContainer .advantage3,
+  .yogaAdvantagesContainer .advantage4,
+  .yogaAdvantagesContainer .advantage5,
+  .yogaAdvantagesContainer .advantage6 {
+    align-self: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .heroContainer .mainContent {
+    padding: 0rem;
+  }
+  .yogaClassContainer .contentContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .yogaClassContainer .classContent {
+    width: 40%;
+    padding: 3rem;
+  }
+  /* yoga advantage */
+  .yogaAdvantagesContainer .advantageRightContainer {
+    margin-left: 6rem;
+  }
+  .yogaAdvantagesContainer .advantageLeftContainer {
+    margin-right: 6rem;
+    margin-left: 0;
+  }
+  .yogaAdvantagesContainer .advantage {
+    width: 60%;
+  }
+}
