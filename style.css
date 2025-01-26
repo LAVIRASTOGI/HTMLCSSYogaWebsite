@@ -261,6 +261,54 @@ p {
 .yogaAdvantagesContainer .advantage6 {
   align-self: flex-end;
 }
+
+/* end */
+
+/* section - yoga  */
+.yogaExcersisesContainer {
+  background-color: var(--backgroundColor);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.yogaExcersisesContainer .containerExercises {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 1rem;
+  flex-direction: column;
+}
+.yogaExcersisesContainer img {
+  border-radius: 50%;
+  margin: 1rem 0;
+  max-width: 200px;
+}
+.yogaExcersisesContainer h2:hover {
+  color: var(--mainHeadingColor);
+}
+.yogaExcersisesContainer p {
+  margin: 0.5rem 0;
+}
+
+footer {
+  background-color: var(--mainHeadingColor);
+  color: #ffff;
+  margin-bottom: 0px;
+}
+.footContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  gap: 1rem;
+}
+
+.footContainer ul {
+  display: flex;
+  gap: 0.7rem;
+}
 @media screen and (max-width: 700px) {
   /* header */
   .heroContainer .infoContainer {
@@ -352,5 +400,13 @@ p {
   }
   .yogaAdvantagesContainer .advantage {
     width: 60%;
+  }
+  .yogaExcersisesContainer .containerExercises {
+    flex-direction: row;
+    width: 80%;
+  }
+  .footContainer {
+    width: 80%;
+    margin: auto;
   }
 }
